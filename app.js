@@ -38,11 +38,11 @@ app.post("/", function (req, res) {
 
 	const jsonData = JSON.stringify(userData);
 
-	const url = "YOUR_URL";
+	const url = process.env.URL;
 
 	const options = {
 		method: "POST",
-		auth: "sid1993:YOUR_API_KEY",
+		auth: process.env.API_KEY,
 	};
 
 	const httpRequest = https.request(url, options, function (response) {
