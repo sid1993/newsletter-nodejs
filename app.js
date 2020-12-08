@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(process.env.PORT || 3000, function () {
 	console.log("Node Server listening on port 3000");
+	console.log(process.env.URL);
+	console.log(process.env.API_KEY);
 });
 
 app.get("/", function (req, res) {
